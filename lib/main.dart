@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quiz_project/Thirdscreen.dart';
 import 'package:quiz_project/homeScreen.dart';
 import 'package:quiz_project/secondscreen.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 void main() {
   runApp(const MyApp());
