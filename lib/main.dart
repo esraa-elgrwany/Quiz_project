@@ -3,7 +3,7 @@ import 'package:quiz_project/Thirdscreen.dart';
 import 'package:quiz_project/homeScreen.dart';
 import 'package:quiz_project/secondscreen.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 void main() {
   runApp(const MyApp());
 }

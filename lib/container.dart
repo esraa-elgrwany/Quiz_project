@@ -8,21 +8,21 @@ class Con extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
-      padding: EdgeInsets.all(12),
-      decoration:BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color: color,
+    return Expanded(
+      child: Container(
+              padding: EdgeInsets.all(12),
+              decoration:BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: color,
+              ),
+                  child:Row(
+                    children: [
+                      Image.asset(img),
+                      SizedBox(width: 8,),
+                      Text(txt,style:TextStyle(fontWeight:FontWeight.w500 ,fontSize: 14) ,),
+                    ],
+                  )
       ),
-          width: 151,
-         height: 61,
-          child:Row(
-            children: [
-              Image.asset(img),
-              SizedBox(width: 12,),
-              Text(txt,style:TextStyle(fontWeight:FontWeight.w500 ,fontSize: 14) ,),
-            ],
-          )
     );
   }
 }
