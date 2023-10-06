@@ -166,27 +166,29 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: double.infinity,
                       height: 400,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(15),
                       ),
-                      child: CarouselSlider(
-                                items: img,
-                                options: CarouselOptions(
-                                  aspectRatio: 16 / 9,
-                                  viewportFraction: 0.8,
-                                  initialPage: 0,
-                                  autoPlay: true,
-                                  height: 400,
-                                  autoPlayInterval: Duration(seconds: 2),
-                                  autoPlayAnimationDuration:
-                                      Duration(milliseconds: 500),
-                                  autoPlayCurve: Curves.fastOutSlowIn,
-                                  enlargeCenterPage: true,
-                                  onPageChanged: (index, reason) {
-                                    currentPage=index;
-                                  },
-                                  //aspectRatio: .2,
-                                ),
-                          ),
+                      child: ClipRect(
+                        child: CarouselSlider(
+                                  items: img,
+                                  options: CarouselOptions(
+                                    aspectRatio: 16 / 9,
+                                    viewportFraction: 0.8,
+                                    initialPage: 0,
+                                    autoPlay: true,
+                                    height: 400,
+                                    autoPlayInterval: Duration(seconds: 2),
+                                    autoPlayAnimationDuration:
+                                        Duration(milliseconds: 500),
+                                    autoPlayCurve: Curves.fastOutSlowIn,
+                                    enlargeCenterPage: true,
+                                    onPageChanged: (index, reason) {
+                                      currentPage=index;
+                                    },
+                                    //aspectRatio: .2,
+                                  ),
+                            ),
+                      ),
                     ),
                   ),
                 ],
@@ -271,7 +273,6 @@ class _HomeScreenState extends State<HomeScreen> {
         unselectedItemColor: Colors.grey,
         selectedLabelStyle: TextStyle(
           color: Colors.green,
-          fontSize: 15,
         ),
         items: [
           BottomNavigationBarItem(
@@ -280,7 +281,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.pushNamed(context, SecondScreen.routeName);
                   },
                   child: ImageIcon(AssetImage("assets/images/home1.png"))),
-              label: "*"),
+              label: ""),
           BottomNavigationBarItem(
               icon: ImageIcon(
                   AssetImage("assets/images/grid-01.png")),

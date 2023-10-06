@@ -68,18 +68,26 @@ class SecondScreen extends StatelessWidget {
                 children: [
                   Content(
                       "assets/images/heart.png", " Heart Rate", "81 ", "BPM"),
-                  VerticalDivider(
-                    color: Color(0xFFD9D9D9),
-                    thickness: 2,
-                    indent: 2,
-                    endIndent: 2,
+                  Container(
+                    width: 5,
+                    height:50,
+                    child: VerticalDivider(
+                      color: Color(0xFFD9D9D9),
+                      thickness:2,
+                      indent: 2,
+                      endIndent:2,
+                    ),
                   ),
                   Content("assets/images/list.png", " To-do", "32,5 ", "%"),
-                  VerticalDivider(
-                    color: Color(0xFFD9D9D9),
-                    thickness: 2,
-                    indent: 2,
-                    endIndent:2,
+                  Container(
+                    width: 5,
+                    height: 50,
+                    child: VerticalDivider(
+                      color: Color(0xFFD9D9D9),
+                      thickness: 2,
+                      indent: 2,
+                      endIndent:2,
+                    ),
                   ),
                   Content("assets/images/Vector.png", " calo", "1000 ", "cal"),
                 ],
